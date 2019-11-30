@@ -1,0 +1,76 @@
+*hex.txt*           For Vim version 8               Last change: 2019 Nov 30
+*hex* *vim-hex*
+
+                               _~
+                              | |__   _____  __~
+                              | '_ \ / _ \ \/ /~
+                              | | | |  __/>  <~
+                              |_| |_|\___/_/\_\~
+
+                   Hex and Bless your binary files for editing
+
+==============================================================================
+CONTENTS                                                      *hex-contents*
+
+    1. Intro ................................................... |hex-intro|
+    2. Usage ................................................... |hex-usage|
+    3. License ............................................... |hex-license|
+    4. Bugs ..................................................... |hex-bugs|
+    5. Contributing ..................................... |hex-contributing|
+    6. Credits ............................................... |hex-credits|
+
+==============================================================================
+INTRO                                                            *hex-intro*
+
+hex is a vim plugin that brings hex-editing to vim via xxd
+
+==============================================================================
+USAGE                                                            *hex-usage*
+
+Install it with your favorite plugin manager, and then use one of the provided
+commands!
+
+*:Hex[!]*
+    Hex-edit the file. If [!] is included, re-edit the file on disk (like an
+    undo for `:Hex`).
+
+    This command shadows `:Hexplore` from netrw, but that is generally a
+    rarely-used command.
+
+*:Bless*
+    Synonym for `:Hex!`
+
+==============================================================================
+LICENSE                                                        *hex-license*
+
+MIT License. Copyright © 2019 D. Ben Knoble
+Full text available at
+https://github.com/benknoble/vim-hex/blob/master/LICENSE
+
+==============================================================================
+BUGS                                                              *hex-bugs*
+
+At the time of this writing, no major bugs have been found.
+
+If you find one and wish to report it, you can do so at
+https://github.com/benknoble/vim-hex/issues
+
+==============================================================================
+CONTRIBUTING                                              *hex-contributing*
+
+Want to submit a new feature, bugfix, or hack on hex?
+Submit pull requests to
+https://github.com/benknoble/vim-hex/pulls
+
+Existing code determines style guidelines.
+
+==============================================================================
+CREDITS                                                        *hex-credits*
+
+Maintained by:
+- D. Ben Knoble (https://github.com/benknoble)
+
+Git repository:
+https://github.com/benknoble/vim-hex
+
+ vim:tw=78:ts=8:ft=help:norl:
