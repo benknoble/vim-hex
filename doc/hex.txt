@@ -14,10 +14,11 @@ CONTENTS                                                      *hex-contents*
 
     1. Intro ................................................... |hex-intro|
     2. Usage ................................................... |hex-usage|
-    3. License ............................................... |hex-license|
-    4. Bugs ..................................................... |hex-bugs|
-    5. Contributing ..................................... |hex-contributing|
-    6. Credits ............................................... |hex-credits|
+    3. Options ............................................... |hex-license|
+    4. License ............................................... |hex-license|
+    5. Bugs ..................................................... |hex-bugs|
+    6. Contributing ..................................... |hex-contributing|
+    7. Credits ............................................... |hex-credits|
 
 ==============================================================================
 INTRO                                                            *hex-intro*
@@ -39,6 +40,16 @@ commands!
 
 *:Bless*
     Synonym for `:Hex!`
+
+==============================================================================
+OPTIONS                                                        *hex-options*
+
+*g:hex_no_update*
+
+    Set this to a truthy value to disable automatic updates of the ASCII
+    column when leaving insert mode. Updates will still be made on write.
+    This variable is dynamically used, so changing its value on the fly will
+    change behavior (i.e., you do not have to restart vim).
 
 ==============================================================================
 LICENSE                                                        *hex-license*
