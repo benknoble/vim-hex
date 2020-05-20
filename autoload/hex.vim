@@ -3,6 +3,9 @@ function! s:update_hex_changedtick() abort
 endfunction
 
 function hex#setup() abort
+  if exists('b:hex_changedtick')
+    return
+  endif
   setlocal binary
   call hex#dump()
   setlocal nomodified
@@ -23,6 +26,7 @@ function hex#setup() abort
   let b:undo_ftplugin .= 'setlocal binary<'
   let b:undo_ftplugin .= '|execute "au! ftplugin_xxd * <buffer>"'
   let b:undo_ftplugin .= '|call hex#rev()'
+  let b:undo_ftplugin .= '|unlet b:hex_changedtick'
 endfunction
 
 function hex#dump() abort
