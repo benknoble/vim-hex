@@ -30,9 +30,10 @@ USAGE                                                            *hex-usage*
 Install it with your favorite plugin manager, and then use one of the provided
 commands!
 
-*:Hex[!]*
+*:Hex[!]*                                                         *hex-binary*
     Hex-edit the file. If [!] is included, re-edit the file on disk (like an
-    undo for `:Hex`).
+    undo for `:Hex`). This works best on binary files if they are edited with
+    'binary' set to begin with; this can be achieved using |-b| or |++binary|.
 
     This command shadows `:Hexplore` from netrw, but that is generally a
     rarely-used command.
