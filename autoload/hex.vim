@@ -62,10 +62,12 @@ function hex#update() abort
     return
   endif
   let l:changed = s:hex_changed()
-  call s:hex_save_cursor()
-  call hex#rev()
-  call hex#dump()
-  call s:hex_restore_cursor()
+  if l:changed
+    call s:hex_save_cursor()
+    call hex#rev()
+    call hex#dump()
+    call s:hex_restore_cursor()
+  endif
   if !l:changed
     setlocal nomodified
   endif
