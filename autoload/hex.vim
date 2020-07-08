@@ -62,11 +62,16 @@ endfunction
 
 " update text column after changing hex values
 function hex#update() abort
+  if get(g:, 'hex_no_update', v:false)
+    return
+  endif
   let l:changed = s:hex_changed()
-  call s:hex_save_cursor()
-  call hex#rev()
-  call hex#dump()
-  call s:hex_restore_cursor()
+  if l:changed
+    call s:hex_save_cursor()
+    call hex#rev()
+    call hex#dump()
+    call s:hex_restore_cursor()
+  endif
   if !l:changed
     setlocal nomodified
   endif
